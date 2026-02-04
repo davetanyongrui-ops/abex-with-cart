@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Test - ABEX Pumps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <style>
+        .test-container {
+            padding: 100px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-product {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .test-btn {
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Cart -->
+    <header>
+        <div class="container header-container">
+            <a href="new-index.html" class="logo">
+                <img src="https://abex-engrg.com/wp-content/themes/abex-engineering/images/page_template/logo.png" alt="ABEX Pumps Logo" class="logo-img">
+            </a>
+            <div class="cart-container">
+                <a href="#" id="cart-icon" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                <div id="cart-dropdown" class="cart-dropdown"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="test-container">
+        <h1>Shopping Cart Test Page</h1>
+        <p>Test the shopping cart functionality by adding items below:</p>
+        
+        <div class="test-product">
+            <h3>Test Product 1 - Centrifugal Pump</h3>
+            <p>Price: SGD $899.99</p>
+            <button class="btn btn-secondary test-btn" onclick="addToCart('test-001', 'Centrifugal Pump', 899.99, 'images/Water Pump 2.webp')">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+        </div>
+        
+        <div class="test-product">
+            <h3>Test Product 2 - Booster Pump</h3>
+            <p>Price: SGD $1,299.99</p>
+            <button class="btn btn-secondary test-btn" onclick="addToCart('test-002', 'Booster Pump', 1299.99, 'images/Water Pump 3.webp')">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+        </div>
+        
+        <div class="test-product">
+            <h3>Test Product 3 - Circulator Pump</h3>
+            <p>Price: SGD $749.99</p>
+            <button class="btn btn-secondary test-btn" onclick="addToCart('test-003', 'Circulator Pump', 749.99, 'images/Water Pump 4.webp')">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <a href="cart.html" class="btn">View Cart Page</a>
+            <a href="checkout.html" class="btn btn-secondary">Checkout Page</a>
+            <button class="btn" onclick="cart.clearCart()">Clear Cart</button>
+        </div>
+    </section>
+
+    <script src="assets/js/cart.js"></script>
+    <script>
+        // Test the cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Cart initialized with', cart.getCartItems().length, 'items');
+        });
+    </script>
+</body>
+</html>

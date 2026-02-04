@@ -1,0 +1,28 @@
+{
+  "name": "abex-pumps-website",
+  "version": "1.0.0",
+  "description": "ABEX Pumps website with minification build process",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "cleancss -o assets/css/main.min.css assets/css/main-styles.css && cleancss -o assets/css/contact.min.css assets/css/contact-styles.css && cleancss -o assets/css/product.min.css assets/css/product-styles.css && cleancss -o assets/css/project.min.css assets/css/project-styles.css",
+    "build:js": "uglifyjs assets/js/main.js -o assets/js/main.min.js -c -m && uglifyjs assets/js/projects.js -o assets/js/projects.min.js -c -m",
+    "build": "npm run build:css && npm run build:js",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "website",
+    "pumps",
+    "abex"
+  ],
+  "author": "ABEX Pumps",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "busboy": "^1.6.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "serve": "^14.2.3",
+    "uglify-js": "^3.19.3"
+  }
+}

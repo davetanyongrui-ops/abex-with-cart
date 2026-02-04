@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .image-container {
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <div class="image-container">
+        <h2>Submersible Pump Installation Image</h2>
+        <img id="image1" src="https://images.unsplash.com/photo-1591703298826-65eac8e20c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Submersible Pump Installation" onerror="handleError(this)" onload="handleSuccess(this)">
+        <p id="status1">Loading...</p>
+    </div>
+    
+    <div class="image-container">
+        <h2>Industrial Water Pump System</h2>
+        <img id="image2" src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Industrial Water Pump System" onerror="handleError(this)" onload="handleSuccess(this)">
+        <p id="status2">Loading...</p>
+    </div>
+    
+    <div class="image-container">
+        <h2>Water Pump Maintenance</h2>
+        <img id="image3" src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Water Pump Maintenance" onerror="handleError(this)" onload="handleSuccess(this)">
+        <p id="status3">Loading...</p>
+    </div>
+    
+    <script>
+        function handleError(img) {
+            const statusId = 'status' + img.id.replace('image', '');
+            document.getElementById(statusId).innerHTML = '<span class="error">Failed to load image</span>';
+        }
+        
+        function handleSuccess(img) {
+            const statusId = 'status' + img.id.replace('image', '');
+            document.getElementById(statusId).innerHTML = '<span class="success">Image loaded successfully</span>';
+        }
+    </script>
+</body>
+</html>

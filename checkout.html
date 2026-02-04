@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ABEX Pumps</title>
+    <link rel="canonical" href="https://abex-engrg.com/checkout/">
+    <meta name="description" content="Complete your purchase at ABEX Pumps. Provide your details and submit your order for water pump solutions.">
+    <meta name="keywords" content="ABEX, checkout, water pumps, order, purchase">
+    <meta name="author" content="ABEX Pumps">
+    <meta property="og:title" content="Checkout - ABEX Pumps">
+    <meta property="og:description" content="Complete your purchase at ABEX Pumps. Provide your details and submit your order for water pump solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abex-engrg.com/checkout/">
+    <meta property="og:image" content="https://abex-engrg.com/wp-content/themes/abex-engineering/images/page_template/logo.png">
+    <meta property="og:site_name" content="ABEX Pumps">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="new-index.html" class="logo">
+                <img src="https://abex-engrg.com/wp-content/themes/abex-engineering/images/page_template/logo.png" alt="ABEX Pumps Logo" class="logo-img">
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="new-index.html">Home</a></li>
+                    <li><a href="new-about.html">About Us</a></li>
+                    <li><a href="new-products.html">Products</a></li>
+                    <li><a href="new-projects.html">Projects</a></li>
+                    <li><a href="new-contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Shopping Cart -->
+            <div class="cart-container">
+                <a href="#" id="cart-icon" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                <div id="cart-dropdown" class="cart-dropdown"></div>
+            </div>
+            
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-toggle" class="lang-btn">EN</button>
+                <div id="lang-dropdown" class="lang-dropdown">
+                    <a href="checkout.html" class="lang-option">English</a>
+                    <a href="#" class="lang-option">中文</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Checkout</h1>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="section checkout-page">
+        <div class="container">
+            <div id="checkout-content">
+                <!-- Checkout will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABEX Pumps</h3>
+                    <p>Delivering reliable water pump solutions across Southeast Asia with over two decades of industry expertise.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="new-index.html">Home</a></li>
+                        <li><a href="new-about.html">About Us</a></li>
+                        <li><a href="new-products.html">Products</a></li>
+                        <li><a href="new-projects.html">Projects</a></li>
+                        <li><a href="new-contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>30 Kallang Pudding Road #06-02</p>
+                            <p>Valiant Industrial Building</p>
+                            <p>Singapore 349312</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <p>Tel: (65) 6841-2818</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <p>rickytan@abex-engrg.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ABEX Pumps. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Language switcher functionality
+        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('lang-dropdown');
+        
+        langToggle.addEventListener('click', () => {
+            langDropdown.classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!langToggle.contains(event.target) && !langDropdown.contains(event.target)) {
+                langDropdown.classList.remove('show');
+            }
+        });
+
+        // Render checkout content
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCheckout();
+        });
+
+        function renderCheckout() {
+            const checkoutContent = document.getElementById('checkout-content');
+            const cartItems = cart.getCartItems();
+            
+            if (cartItems.length === 0) {
+                checkoutContent.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your Cart is Empty</h3>
+                        <p>You need to add items to your cart before checking out.</p>
+                        <a href="new-products.html" class="btn">Browse Products</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const cartItemsHTML = cartItems.map(item => `
+                <div class="checkout-item">
+                    <div class="checkout-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="checkout-item-details">
+                        <h4>${item.name}</h4>
+                        <p>${item.quantity} × ${formatCurrency(item.price)}</p>
+                    </div>
+                    <div class="checkout-item-price">
+                        ${formatCurrency(item.price * item.quantity)}
+                    </div>
+                </div>
+            `).join('');
+
+            const subtotal = cart.getCartTotal();
+            const gst = subtotal * 0.08; // 8% GST for Singapore
+            const total = subtotal + gst;
+
+            checkoutContent.innerHTML = `
+                <div class="checkout-container">
+                    <div class="checkout-form-section">
+                        <h2>Customer Information</h2>
+                        <form id="checkout-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Delivery Address *</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-row" style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px;">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="postalCode">Postal Code *</label>
+                                    <input type="text" id="postalCode" name="postalCode" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="Singapore" selected>Singapore</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="notes">Additional Notes</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Any special requirements or delivery instructions..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-place-order">
+                                <i class="fas fa-check-circle"></i> Place Order
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="checkout-summary-section">
+                        <h2>Order Summary</h2>
+                        <div class="checkout-items">
+                            ${cartItemsHTML}
+                        </div>
+                        
+                        <div class="checkout-total">
+                            <div class="checkout-total-row">
+                                <span>Subtotal:</span>
+                                <span>${formatCurrency(subtotal)}</span>
+                            </div>
+                            <div class="checkout-total-row">
+                                <span>GST (8%):</span>
+                                <span>${formatCurrency(gst)}</span>
+                            </div>
+                            <div class="checkout-total-row total">
+                                <span>Total:</span>
+                                <span>${formatCurrency(total)}</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; padding: 15px; background: var(--light); border-radius: 8px; font-size: 0.9rem;">
+                            <p><strong><i class="fas fa-info-circle"></i> Order Processing</strong></p>
+                            <p>After submitting your order, our team will contact you within 1 business day to confirm details and arrange delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Add form submission handler
+            document.getElementById('checkout-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitOrder();
+            });
+        }
+
+        async function submitOrder() {
+            const form = document.getElementById('checkout-form');
+            const formData = new FormData(form);
+            
+            const orderData = {
+                customer: {
+                    fullName: formData.get('fullName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    company: formData.get('company'),
+                    address: formData.get('address'),
+                    city: formData.get('city'),
+                    postalCode: formData.get('postalCode'),
+                    country: formData.get('country'),
+                    notes: formData.get('notes')
+                },
+                items: cart.getCartItems(),
+                subtotal: cart.getCartTotal(),
+                gst: cart.getCartTotal() * 0.08,
+                total: cart.getCartTotal() * 1.08,
+                orderDate: new Date().toISOString()
+            };
+
+            try {
+                // Show loading state
+                const submitBtn = document.querySelector('.btn-place-order');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                submitBtn.disabled = true;
+
+                // Submit order to backend
+                const response = await fetch('process_order.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(orderData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Show success message
+                    alert(`Thank you for your order! Order ID: ${result.order_id}\nOur team will contact you within 1 business day to confirm your order details.`);
+                    
+                    // Clear cart
+                    cart.clearCart();
+                    
+                    // Redirect to home page
+                    window.location.href = 'new-index.html';
+                } else {
+                    throw new Error(result.message || 'Failed to place order');
+                }
+            } catch (error) {
+                console.error('Error submitting order:', error);
+                alert('Error: ' + error.message + '\nPlease try again or contact us directly.');
+                
+                // Reset button
+                const submitBtn = document.querySelector('.btn-place-order');
+                submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Place Order';
+                submitBtn.disabled = false;
+            }
+        }
+
+        // Update cart display when cart changes
+        window.addEventListener('cartUpdated', renderCheckout);
+    </script>
+    <script src="image-error-handler.js"></script>
+</body>
+</html>

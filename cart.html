@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ABEX Pumps</title>
+    <link rel="canonical" href="https://abex-engrg.com/cart/">
+    <meta name="description" content="View and manage your shopping cart at ABEX Pumps. Review your selected water pump products before checkout.">
+    <meta name="keywords" content="ABEX, shopping cart, water pumps, cart, checkout">
+    <meta name="author" content="ABEX Pumps">
+    <meta property="og:title" content="Shopping Cart - ABEX Pumps">
+    <meta property="og:description" content="View and manage your shopping cart at ABEX Pumps. Review your selected water pump products before checkout.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abex-engrg.com/cart/">
+    <meta property="og:image" content="https://abex-engrg.com/wp-content/themes/abex-engineering/images/page_template/logo.png">
+    <meta property="og:site_name" content="ABEX Pumps">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="new-index.html" class="logo">
+                <img src="https://abex-engrg.com/wp-content/themes/abex-engineering/images/page_template/logo.png" alt="ABEX Pumps Logo" class="logo-img">
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="new-index.html">Home</a></li>
+                    <li><a href="new-about.html">About Us</a></li>
+                    <li><a href="new-products.html">Products</a></li>
+                    <li><a href="new-projects.html">Projects</a></li>
+                    <li><a href="new-contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Shopping Cart -->
+            <div class="cart-container">
+                <a href="#" id="cart-icon" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                <div id="cart-dropdown" class="cart-dropdown"></div>
+            </div>
+            
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-toggle" class="lang-btn">EN</button>
+                <div id="lang-dropdown" class="lang-dropdown">
+                    <a href="cart.html" class="lang-option">English</a>
+                    <a href="#" class="lang-option">中文</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="section cart-page">
+        <div class="container">
+            <div id="cart-content">
+                <!-- Cart will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABEX Pumps</h3>
+                    <p>Delivering reliable water pump solutions across Southeast Asia with over two decades of industry expertise.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="new-index.html">Home</a></li>
+                        <li><a href="new-about.html">About Us</a></li>
+                        <li><a href="new-products.html">Products</a></li>
+                        <li><a href="new-projects.html">Projects</a></li>
+                        <li><a href="new-contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>30 Kallang Pudding Road #06-02</p>
+                            <p>Valiant Industrial Building</p>
+                            <p>Singapore 349312</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <p>Tel: (65) 6841-2818</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <p>rickytan@abex-engrg.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ABEX Pumps. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Language switcher functionality
+        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('lang-dropdown');
+        
+        langToggle.addEventListener('click', () => {
+            langDropdown.classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!langToggle.contains(event.target) && !langDropdown.contains(event.target)) {
+                langDropdown.classList.remove('show');
+            }
+        });
+
+        // Render cart content
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCart();
+        });
+
+        function renderCart() {
+            const cartContent = document.getElementById('cart-content');
+            const cartItems = cart.getCartItems();
+            
+            if (cartItems.length === 0) {
+                cartContent.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your Cart is Empty</h3>
+                        <p>Browse our products and add items to your cart to get started.</p>
+                        <a href="new-products.html" class="btn">Browse Products</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const cartItemsHTML = cartItems.map(item => `
+                <tr class="cart-item-row">
+                    <td>
+                        <div class="cart-product-info">
+                            <div class="cart-product-image">
+                                <img src="${item.image}" alt="${item.name}">
+                            </div>
+                            <div class="cart-product-details">
+                                <h4>${item.name}</h4>
+                                <p>Product ID: ${item.id}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="cart-price">${formatCurrency(item.price)}</td>
+                    <td>
+                        <div class="cart-quantity">
+                            <button class="qty-btn" onclick="cart.updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="qty-btn" onclick="cart.updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                        </div>
+                    </td>
+                    <td class="cart-subtotal">${formatCurrency(item.price * item.quantity)}</td>
+                    <td class="cart-remove">
+                        <button class="remove-item" onclick="cart.removeItem('${item.id}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+
+            const total = cart.getCartTotal();
+            const itemCount = cart.getItemCount();
+
+            cartContent.innerHTML = `
+                <div class="cart-container-full">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${cartItemsHTML}
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="cart-summary-section">
+                    <div class="cart-summary-content">
+                        <div>
+                            <h3>Order Summary</h3>
+                            <p>${itemCount} ${itemCount === 1 ? 'item' : 'items'} in cart</p>
+                        </div>
+                        <div class="cart-total-amount">
+                            Total: <span>${formatCurrency(total)}</span>
+                        </div>
+                        <div class="cart-actions-full">
+                            <a href="new-products.html" class="btn btn-continue-shopping">Continue Shopping</a>
+                            <a href="checkout.html" class="btn btn-checkout">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Update cart display when cart changes
+        window.addEventListener('cartUpdated', renderCart);
+    </script>
+    <script src="image-error-handler.js"></script>
+</body>
+</html>

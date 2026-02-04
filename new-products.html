@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - ABEX Pumps</title>
+    <link rel="canonical" href="https://abex-engrg.com/products/">
+    <meta name="description" content="Explore ABEX's complete range of water pumping solutions including water pumps, submersible pumps, industrial pumps, and accessories.">
+    <meta name="keywords" content="ABEX, Paragon Pump, water pumps, submersible pumps, industrial pumps, pump accessories, Singapore">
+    <meta name="author" content="ABEX Pumps">
+    <meta property="og:title" content="Our Products - ABEX Pumps">
+    <meta property="og:description" content="Explore ABEX's complete range of water pumping solutions including water pumps, submersible pumps, industrial pumps, and accessories.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abex-engrg.com/products/">
+    <meta property="og:image" content="https://abex-engrg.com/wp-content/themes/abex-engineering/images/page_template/logo.png">
+    <meta property="og:site_name" content="ABEX Pumps">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/product.min.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+<body id="products-page">
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="new-index.html" class="logo">
+                <img src="https://abex-engrg.com/wp-content/themes/abex-engineering/images/page_template/logo.png" alt="ABEX Pumps Logo" class="logo-img">
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="new-index.html">Home</a></li>
+                    <li><a href="new-about.html">About Us</a></li>
+                    <li><a href="new-products.html" class="active">Products</a></li>
+                    <li><a href="new-projects.html">Projects</a></li>
+                    <li><a href="new-contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Shopping Cart -->
+            <div class="cart-container">
+                <a href="#" id="cart-icon" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                <div id="cart-dropdown" class="cart-dropdown"></div>
+            </div>
+            
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-toggle" class="lang-btn">EN</button>
+                <div id="lang-dropdown" class="lang-dropdown">
+                    <a href="new-products.html" class="lang-option">English</a>
+                    <a href="new-products-zh.html" class="lang-option">中文</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Products</h1>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text" data-aos="fade-right">
+                    <h2>Reliable Water Pump Solutions</h2>
+                    <p>At ABEX, we specialize in high-quality water pumps, submersible pumps, and industrial pumping systems that power homes, factories, and infrastructures across the region. Our solutions combine efficiency, durability, and engineering excellence, ensuring smooth water flow and dependable performance in every application.</p>
+                    <p>One of our featured brands, Paragon Pump, represents our commitment to quality and innovation. From commercial buildings to heavy-duty industrial plants, Paragon Pump is engineered for durability and trusted for performance.</p>
+                </div>
+                <div class="content-image" data-aos="fade-left">
+                    <img src="images/Water Pump 1.webp" alt="ABEX Pump Solutions">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Range -->
+    <section class="section light-bg">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Product Range</h2>
+                <p>ABEX offers a complete range of water pumping solutions designed to meet every need — from household water supply to complex industrial systems.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-img">
+                        <img src="images/Water Pump 2.webp" alt="Centrifugal Water Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Centrifugal Pumps</h3>
+                        <p>High-efficiency pumps for water transfer applications with durable construction.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('centrifugal-001', 'Centrifugal Pumps', 899.99, 'images/Water Pump 2.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="images/Water Pump 3.webp" alt="Booster Water Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Booster Pumps</h3>
+                        <p>Pressure boosting solutions for residential and commercial use with variable speed.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('booster-001', 'Booster Pumps', 1299.99, 'images/Water Pump 3.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="images/Water Pump 4.webp" alt="Circulator Water Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Circulator Pumps</h3>
+                        <p>Efficient circulation pumps for heating and cooling systems with energy saving.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('circulator-001', 'Circulator Pumps', 749.99, 'images/Water Pump 4.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Engineered for Excellence</h2>
+                <p>Our water pumps are designed to deliver reliable performance in diverse applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submersible Pumps -->
+    <section class="section light-bg">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Submersible Pumps</h2>
+                <p>Submerged pumps for wells, sewage, and industrial applications.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-img">
+                        <img src="images/Water Pump 2.webp" alt="Deep Well Submersible Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Deep Well Pumps</h3>
+                        <p>High-capacity pumps for deep water extraction with stainless steel construction.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('deepwell-001', 'Deep Well Pumps', 1599.99, 'images/Water Pump 2.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="images/Water Pump 3.webp" alt="Sewage Submersible Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Sewage Pumps</h3>
+                        <p>Robust pumps for wastewater and sewage handling with anti-clogging design.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('sewage-001', 'Sewage Pumps', 1199.99, 'images/Water Pump 3.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="images/Water Pump 4.webp" alt="Industrial Submersible Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Industrial Pumps</h3>
+                        <p>Heavy-duty submersible pumps for industrial processes with high reliability.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('industrial-sub-001', 'Industrial Submersible Pumps', 2199.99, 'images/Water Pump 4.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Built to Last</h2>
+                <p>Submersible pumps engineered for continuous operation in challenging conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industrial Pumps -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Industrial Pumps</h2>
+                <p>Heavy-duty pumps for manufacturing, processing, and industrial applications.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-img">
+                        <img src="images/Water Pump 4.webp" alt="Chemical Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chemical Pumps</h3>
+                        <p>Corrosion-resistant pumps for chemical transfer with specialized materials.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('chemical-001', 'Chemical Pumps', 2499.99, 'images/Water Pump 4.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="images/Water Pump 2.webp" alt="Slurry Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Slurry Pumps</h3>
+                        <p>Heavy-duty pumps for abrasive and viscous materials with wear-resistant parts.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('slurry-001', 'Slurry Pumps', 2799.99, 'images/Water Pump 2.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="images/Water Pump 3.webp" alt="Multistage Pump">
+                    </div>
+                    <div class="product-content">
+                        <h3>Multistage Pumps</h3>
+                        <p>High-pressure pumps for demanding applications with multiple impeller stages.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('multistage-001', 'Multistage Pumps', 3299.99, 'images/Water Pump 3.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Industrial Strength Solutions</h2>
+                <p>Engineered to handle the most demanding industrial applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories -->
+    <section class="section light-bg">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Accessories</h2>
+                <p>Complete range of pump accessories and spare parts.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-img">
+                        <img src="images/Water Pump 1.webp" alt="Pump Controller">
+                    </div>
+                    <div class="product-content">
+                        <h3>Pump Controllers</h3>
+                        <p>Advanced control systems for pump automation with variable frequency drives.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('controller-001', 'Pump Controllers', 599.99, 'images/Water Pump 1.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="images/Water Pump 5.webp" alt="Pressure Tank">
+                    </div>
+                    <div class="product-content">
+                        <h3>Pressure Tanks</h3>
+                        <p>Pressure vessels for water storage and pressure maintenance with diaphragm.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('tank-001', 'Pressure Tanks', 399.99, 'images/Water Pump 5.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="images/Water Pump 2.webp" alt="Pump Valves">
+                    </div>
+                    <div class="product-content">
+                        <h3>Valves & Fittings</h3>
+                        <p>Complete range of valves and pipe fittings for pump system installations.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn">Learn More</a>
+                            <button class="btn btn-secondary add-to-cart" onclick="handleAddToCart('valves-001', 'Valves & Fittings', 199.99, 'images/Water Pump 2.webp')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paragon Pump Highlight -->
+    <section class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-image" data-aos="fade-right">
+                    <img src="images/Water Pump 5.webp" alt="Paragon Pump - Durable and Energy Efficient">
+                </div>
+                <div class="content-text" data-aos="fade-left">
+                    <h2>Paragon Pump</h2>
+                    <p>Our featured brand, Paragon Pump, is renowned for its durability, performance, and energy efficiency. Engineered to the highest standards, Paragon pumps deliver reliable water solutions across various industries.</p>
+                    <p>With innovative technology and robust construction, Paragon pumps ensure long-lasting performance even in the most demanding applications.</p>
+                    <ul>
+                        <li>Energy-efficient motor technology</li>
+                        <li>Corrosion-resistant materials</li>
+                        <li>Low maintenance requirements</li>
+                        <li>Extended operational life</li>
+                    </ul>
+                    <a href="new-contact.html" class="btn btn-secondary">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Need Help Selecting the Right Pump?</h2>
+                <p>Contact our experts for personalized recommendations based on your specific requirements.</p>
+                <a href="new-contact.html" class="btn btn-secondary">Contact Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABEX Pumps</h3>
+                    <p>Delivering reliable water pump solutions across Southeast Asia with over two decades of industry expertise.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="new-index.html">Home</a></li>
+                        <li><a href="new-about.html">About Us</a></li>
+                        <li><a href="new-products.html">Products</a></li>
+                        <li><a href="new-projects.html">Projects</a></li>
+                        <li><a href="new-contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>30 Kallang Pudding Road #06-02</p>
+                            <p>Valiant Industrial Building</p>
+                            <p>Singapore 349312</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <p>Tel: (65) 6841-2818</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <p>rickytan@abex-engrg.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ABEX Pumps. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Language switcher functionality
+        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('lang-dropdown');
+        
+        langToggle.addEventListener('click', () => {
+            langDropdown.classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!langToggle.contains(event.target) && !langDropdown.contains(event.target)) {
+                langDropdown.classList.remove('show');
+            }
+        });
+    </script>
+    <script src="image-error-handler.js"></script>
+</body>
+</html>

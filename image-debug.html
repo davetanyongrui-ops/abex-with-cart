@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            margin: 10px 0;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .portfolio-img {
+            height: 200px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Image Loading Debug Test</h1>
+        <p>This page tests if the Unsplash images are loading correctly.</p>
+        
+        <div class="image-test">
+            <h3>Test 1: Submersible Pump Installation</h3>
+            <p>URL: https://images.unsplash.com/photo-1534641614095-6222aed9bdd6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600</p>
+            <div class="portfolio-img">
+                <img src="https://images.unsplash.com/photo-1534641614095-6222aed9bdd6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600" alt="Submersible Pump Installation" onerror="this.style.display='none'; this.parentElement.style.backgroundImage='url(https://images.unsplash.com/photo-1534641614095-6222aed9bdd6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600)'; this.parentElement.style.backgroundSize='cover';">
+            </div>
+            <img src="https://images.unsplash.com/photo-1534641614095-6222aed9bdd6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600" alt="Submersible Pump Installation" onerror="this.nextElementSibling.innerHTML='FAILED TO LOAD'; this.nextElementSibling.className='error';" onload="this.nextElementSibling.innerHTML='LOADED SUCCESSFULLY'; this.nextElementSibling.className='success';">
+            <p>Status: LOADING...</p>
+        </div>
+        
+        <div class="image-test">
+            <h3>Test 2: Industrial Water Pump System</h3>
+            <p>URL: https://images.unsplash.com/photo-1639600993675-2281b2c939f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600</p>
+            <div class="portfolio-img">
+                <img src="https://images.unsplash.com/photo-1639600993675-2281b2c939f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600" alt="Industrial Water Pump System" onerror="this.style.display='none'; this.parentElement.style.backgroundImage='url(https://images.unsplash.com/photo-1639600993675-2281b2c939f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600)'; this.parentElement.style.backgroundSize='cover';">
+            </div>
+            <img src="https://images.unsplash.com/photo-1639600993675-2281b2c939f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600" alt="Industrial Water Pump System" onerror="this.nextElementSibling.innerHTML='FAILED TO LOAD'; this.nextElementSibling.className='error';" onload="this.nextElementSibling.innerHTML='LOADED SUCCESSFULLY'; this.nextElementSibling.className='success';">
+            <p>Status: LOADING...</p>
+        </div>
+        
+        <div class="image-test">
+            <h3>Test 3: Water Pump Maintenance</h3>
+            <p>URL: https://images.unsplash.com/photo-1604981338911-b7e37bcd3899?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600</p>
+            <div class="portfolio-img">
+                <img src="https://images.unsplash.com/photo-1604981338911-b7e37bcd3899?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600" alt="Water Pump Maintenance" onerror="this.style.display='none'; this.parentElement.style.backgroundImage='url(https://images.unsplash.com/photo-1604981338911-b7e37bcd3899?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600)'; this.parentElement.style.backgroundSize='cover';">
+            </div>
+            <img src="https://images.unsplash.com/photo-1604981338911-b7e37bcd3899?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=600" alt="Water Pump Maintenance" onerror="this.nextElementSibling.innerHTML='FAILED TO LOAD'; this.nextElementSibling.className='error';" onload="this.nextElementSibling.innerHTML='LOADED SUCCESSFULLY'; this.nextElementSibling.className='success';">
+            <p>Status: LOADING...</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - ABEX Pumps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <div class="admin-shell">
+        <section class="login-section" id="login-section">
+            <div class="login-card">
+                <div class="login-header">
+                    <span class="login-badge"><i class="fas fa-lock"></i></span>
+                    <h1>Admin Login</h1>
+                    <p>Manage products, pricing, and images.</p>
+                </div>
+                <form id="login-form" class="login-form">
+                    <label>
+                        Username
+                        <input type="text" name="username" required>
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="password" required>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <p class="form-message" id="login-message"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="admin-section" id="admin-section" hidden>
+            <header class="admin-header">
+                <div>
+                    <h1>Product Management</h1>
+                    <p>Update products and upload new images.</p>
+                </div>
+                <div class="admin-actions">
+                    <button id="add-product" class="btn btn-accent"><i class="fas fa-plus"></i> Add Product</button>
+                    <button id="logout" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </header>
+
+            <div class="message" id="admin-message" hidden></div>
+
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Image</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-table"></tbody>
+                </table>
+            </div>
+
+            <section class="password-card">
+                <div>
+                    <h2>Change Password</h2>
+                    <p>Update the admin password for this account.</p>
+                </div>
+                <form id="password-form" class="password-form">
+                    <label>
+                        Current Password
+                        <input type="password" id="current-password" required>
+                    </label>
+                    <label>
+                        New Password
+                        <input type="password" id="new-password" minlength="8" required>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Update Password</button>
+                    <p class="form-message" id="password-message"></p>
+                </form>
+            </section>
+        </section>
+    </div>
+
+    <div class="modal" id="product-modal" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 id="modal-title">Add Product</h2>
+                <button class="icon-button" id="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="product-form" class="modal-form">
+                <div class="form-grid">
+                    <label>
+                        Product ID
+                        <input type="text" name="id" id="product-id" required>
+                    </label>
+                    <label>
+                        Name
+                        <input type="text" name="name" id="product-name" required>
+                    </label>
+                    <label>
+                        Price (SGD)
+                        <input type="number" name="price" id="product-price" step="0.01" min="0" required>
+                    </label>
+                    <label>
+                        Category
+                        <input type="text" name="category" id="product-category" required>
+                    </label>
+                    <label class="full">
+                        Description
+                        <textarea name="description" id="product-description" rows="4"></textarea>
+                    </label>
+                    <label class="full">
+                        Image URL
+                        <input type="text" name="image_url" id="product-image-url" placeholder="https://... or uploaded file">
+                    </label>
+                </div>
+
+                <div class="upload-area">
+                    <div>
+                        <p><strong>Upload image</strong> (max 10MB)</p>
+                        <input type="file" id="product-image-file" accept="image/*">
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="upload-btn">Upload</button>
+                </div>
+                <div class="upload-preview" id="upload-preview" hidden>
+                    <img alt="Uploaded preview" />
+                </div>
+                <p class="form-message" id="product-message"></p>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="modal-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="save-product">Save Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./admin.js"></script>
+</body>
+</html>

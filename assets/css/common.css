@@ -1,0 +1,165 @@
+/* Common styles to reduce empty space across all pages */
+/* These styles complement the legacy style.css and apply to new pages */
+
+/* Reduce section padding for new pages */
+.section {
+    padding: 40px 0;
+}
+
+/* Reduce container padding on smaller screens */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 20px 0;
+    }
+}
+
+/* Additional styles for new pages that aren't in legacy CSS */
+
+/* Improve typography with more refined fonts */
+body {
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h2:after {
+    height: 3px;
+    border-radius: 1px;
+}
+
+/* Reduce paragraph margins */
+p {
+    margin-bottom: 0.8rem;
+    color: #4a5568;
+}
+
+/* Reduce grid gaps */
+.content-grid {
+    gap: 1.5rem;
+}
+
+.portfolio-grid {
+    gap: 1.2rem;
+}
+
+.icon-grid {
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+/* Reduce contact form spacing */
+.form-group {
+    margin-bottom: 0.8rem;
+}
+
+.contact-container {
+    gap: 1.2rem;
+}
+
+.info-item {
+    margin-bottom: 0.8rem;
+}
+
+/* Reduce padding in cards and boxes */
+.project-card {
+    padding: 12px;
+}
+
+.contact-form,
+.contact-info {
+    padding: 15px;
+}
+
+.portfolio-item {
+    border-radius: 6px;
+}
+
+.portfolio-overlay {
+    padding: 0.8rem;
+}
+
+.icon-item {
+    padding: 1.2rem 0.8rem;
+}
+
+/* Reduce footer padding */
+footer {
+    padding: 40px 0 15px;
+}
+
+.footer-grid {
+    margin-bottom: 20px;
+}
+
+/* Reduce map section padding */
+.map-container {
+    margin-top: 20px;
+}
+
+.map-placeholder {
+    height: 250px;
+}
+
+/* Reduce CTA section padding */
+.cta-section {
+    padding: 30px 0;
+}
+
+/* Reduce hero section height */
+.page-hero {
+    height: 250px;
+}
+
+/* Reduce button padding */
+.btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* Adjust text centering for new pages */
+.text-center h2:after {
+    height: 3px;
+    border-radius: 1px;
+}
+
+/* Additional styling to prevent empty appearance */
+.content-text ul {
+    margin: 1rem 0;
+}
+
+.content-text ul li {
+    margin-bottom: 0.5rem;
+}
+
+.feature-card {
+    padding: 20px;
+}
+
+.value-card {
+    padding: 20px;
+}
